@@ -1,0 +1,18 @@
+* text=auto eol=lf
+
+*.cs       text eol=lf
+*.csproj   text eol=lf
+*.json     text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.md       text eol=lf
+*.sh       text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+*.png      binary
+*.jpg      binary
+*.dll      binary
+*.exe      binary
+*.nupkg    binary
+*.snupkg   binary

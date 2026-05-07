@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <RootNamespace>RockwellTagReader</RootNamespace>
+    <AssemblyName>RockwellTagReader</AssemblyName>
+
+    <PackageId>RockwellTagReader</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Ewerton Guimarães</Authors>
+    <Company>Ewerton Guimarães</Company>
+    <Copyright>Copyright (c) 2026 Ewerton Guimarães</Copyright>
+    <Description>Pure-C# read-only EtherNet/IP + CIP client for Allen-Bradley ControlLogix / CompactLogix PLCs. Supports Read Tag (single + Multiple Service Packet batch), bit access, atomic types, and resilient reconnect. Zero native dependencies.</Description>
+    <PackageTags>plc;rockwell;allen-bradley;controllogix;compactlogix;cip;ethernet-ip;eip;logix;tag-reader</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/ewerton336/RockwellTagReader</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ewerton336/RockwellTagReader.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>portable</DebugType>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="LICENSE"   Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.4" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
